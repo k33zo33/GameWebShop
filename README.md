@@ -29,7 +29,6 @@ This application enables users to browse, add to cart, and purchase products onl
 - Java Development Kit (JDK) 11 or higher
 - Apache Maven
 - MySQL or any other preferred database
-- Apache Tomcat server
 - Git
 
 ### Installation
