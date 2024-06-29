@@ -13,6 +13,9 @@ public interface OrderRepo extends JpaRepository<Order, Long> {
     List<Order> findByUserId(Long userId);
     List<Order> findByUserIdAndOrderDate(Long userId, Timestamp orderDate);
 
+    List<Order> findByUserIdAndOrderDateBetween(Long userId, Timestamp startTimestamp, Timestamp endTimestamp);
+    List<Order> findByOrderDateBetween(Timestamp startTimestamp, Timestamp endTimestamp);
+
 
 
 

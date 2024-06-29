@@ -3,11 +3,15 @@ package hr.k33zo.gamewebshop.service;
 import hr.k33zo.gamewebshop.model.Item;
 import hr.k33zo.gamewebshop.repository.ItemRepo;
 import hr.k33zo.gamewebshop.repository.OrderItemRepo;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Setter
+@Getter
 @Service
 public class ItemService {
 

@@ -1,8 +1,8 @@
 -- Users
 INSERT INTO "user" (username, password, role) VALUES
                                                     ('guest', 'guest', 'GUEST'),
-                                                   ('admin', 'admin', 'ADMIN'), -- Password: admin
-                                                   ('user', 'user', 'USER');  -- Password: user
+                                                   ('admin', '$2a$12$zgx/ViXA6cqHULcZ.cT8p.oqOaHzC6/A4J1R6ZPes2nH.KGUCiW32', 'ADMIN'), -- Password: admin
+                                                   ('user', '$2a$12$2rPaONNwo.mMzitrpNSSm.ncTTICHnZP1HJs5unFDzj68SCa6/VDa', 'USER');  -- Password: user
 
 -- Categories
 INSERT INTO category (name, description) VALUES

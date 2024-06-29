@@ -1,35 +1,29 @@
 package hr.k33zo.gamewebshop.model;
 
-
+import hr.k33zo.gamewebshop.enums.Event;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.Instant;
+
 @Entity
-@Table(name = "category")
+@Table(name = "user_log")
 @Getter
 @Setter
-
-public class Category {
-
-    public Category() {
-    }
-
-    public Category(String name, String description) {
-        this.name = name;
-        this.description = description;
-    }
+@AllArgsConstructor
+@NoArgsConstructor
+public class UserLog {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(name = "name")
     private String name;
+    private String ipAddress;
+    private Instant loginDate;
 
-    @Column(name = "description")
-    private String description;
-
+    @Enumerated(EnumType.STRING)
+    private Event event;
 }
