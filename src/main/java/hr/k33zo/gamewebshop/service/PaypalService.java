@@ -5,6 +5,8 @@ import com.paypal.base.rest.APIContext;
 import com.paypal.base.rest.PayPalRESTException;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,9 +29,13 @@ public class PaypalService {
             String cancelUrl,
             String successUrl
     ) throws PayPalRESTException {
+
+        BigDecimal totalAmount = BigDecimal.valueOf(total).setScale(2, RoundingMode.HALF_UP);
+
         Amount amount = new Amount();
         amount.setCurrency(currency);
-        amount.setTotal(String.format("%.3f", total));
+        //amount.setTotal(String.format("%.3f", total));
+        amount.setTotal(totalAmount.toString());
 
         Transaction transaction = new Transaction();
         transaction.setDescription(description);
