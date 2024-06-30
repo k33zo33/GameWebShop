@@ -1,4 +1,4 @@
-package hr.k33zo.gamewebshop;
+package hr.k33zo.gamewebshop.config;
 
 import com.paypal.base.rest.APIContext;
 import org.springframework.beans.factory.annotation.Value;

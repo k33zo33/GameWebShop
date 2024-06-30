@@ -1,4 +1,4 @@
-package hr.k33zo.gamewebshop;
+package hr.k33zo.gamewebshop.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;

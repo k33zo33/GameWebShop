@@ -1,4 +1,4 @@
-package hr.k33zo.gamewebshop;
+package hr.k33zo.gamewebshop.config;
 
 
 import hr.k33zo.gamewebshop.filter.IpLog;
