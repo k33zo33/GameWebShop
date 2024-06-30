@@ -70,7 +70,7 @@ public class ItemController {
 
         model.addAttribute("message", "Item added successfully");
 
-        return "addItem";
+        return "redirect:/itemController/items";
     }
 
     @GetMapping("/items/details/{id}")

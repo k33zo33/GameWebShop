@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>User Logs</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cyborg/bootstrap.min.css" integrity="sha384-nEnU7Ae+3lD52AK+RGNzgieBWMnEfgTbRHIwEvp1XXPdqdO6uLTd/NwXbzboqjc2" crossorigin="anonymous">
+    <th:block th:replace="layout :: headFragment('User Logs')"></th:block>
 </head>
 <body>
+<th:block th:replace="layout :: navbarFragment"></th:block>
 <div class="container mt-4">
     <h2>User Activity Logs</h2>
     <table class="table table-bordered">
@@ -27,6 +29,9 @@
         </tbody>
     </table>
 </div>
+<th:block th:replace="layout :: footerFragment"></th:block>
+<th:block th:replace="layout :: scriptsFragment"></th:block>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

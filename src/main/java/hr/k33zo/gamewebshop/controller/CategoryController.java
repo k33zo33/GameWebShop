@@ -32,7 +32,7 @@ public class CategoryController {
         return "addCategory";
     }
 
-    @GetMapping("/save")
+    @PostMapping("/save")
     public String saveCategory(@ModelAttribute("category") Category category, RedirectAttributes redirectAttributes) {
         categoryService.saveCategory(category);
         redirectAttributes.addFlashAttribute("message", "Category saved successfully!");
