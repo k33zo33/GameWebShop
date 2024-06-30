@@ -41,8 +41,12 @@ public class SecurityConfig {
                 .addFilterBefore(new IpLog(), UsernamePasswordAuthenticationFilter.class)
                 .authorizeHttpRequests((authz) -> authz
                         .requestMatchers("/h2-console/**").permitAll()
-                        .requestMatchers("/","/cart" , "cart/showCart","itemController/addItemToCart" ,"userRoleController/", "cart/add","/home", "/register", "/itemController/items", "/items", "/userRoleController/userInfo","/cart/remove").permitAll()
-                        .requestMatchers("/addItem", "/products", "/edituser", "/transactionLog/logs", "/itemController/delete/", "/itemController/edit/", "/categoryController/delete/", "categoryController/add", "/categoryController/edit/").hasAuthority("ADMIN")
+                        .requestMatchers("/","/cart" , "cart/showCart","itemController/addItemToCart" ,
+                                "userRoleController/", "cart/add","/home", "/register", "/itemController/items",
+                                "/items", "/userRoleController/userInfo","/cart/remove").permitAll()
+                        .requestMatchers("/addItem", "/products", "/edituser", "/transactionLog/logs",
+                                "/itemController/delete/", "/itemController/edit/", "/categoryController/delete/",
+                                "categoryController/add", "/categoryController/edit/").hasAuthority("ADMIN")
 
                         .anyRequest().authenticated()
                 )

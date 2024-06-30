@@ -20,7 +20,7 @@
     <h4>Total Paid</h4>
     <p th:text="${total} + ' USD'"></p>
 
-    <a href="/" class="btn btn-primary">Continue Shopping</a>
+    <a th:href="@{/itemController/items}" class="btn btn-primary">Continue Shopping</a>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
