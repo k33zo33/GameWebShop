@@ -50,7 +50,8 @@ public class SecurityConfig {
                         .ignoringRequestMatchers("/h2-console/**")
                 )
 
-                .formLogin(withDefaults())
+                .formLogin(login -> login.defaultSuccessUrl("/itemController/items", true))
+
 
                 .logout(logout -> logout
                         .logoutSuccessUrl("/").permitAll()

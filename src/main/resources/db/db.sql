@@ -13,10 +13,10 @@ INSERT INTO category (name, description) VALUES
 
 -- Items
 INSERT INTO item (name, description, price, picture, category_id) VALUES
-                                                                  ('MTG Pack', 'Pack of 15 Magic The Gathering cards', 5.00, 'https://example.com/poker.jpg', 1),
-                                                                  ('Catan', 'Classic board game.', 20.00, 'https://example.com/monopoly.jpg', 2),
-                                                                  ('The Witcher 3', 'Popular RPG video game.', 60.00, 'https://example.com/fifa23.jpg', 3),
-                                                                  ('Dice', 'Pack of DND dice', 10.00, 'https://example.com/puzzle.jpg', 4);
+                                                                  ('MTG Pack', 'Pack of 15 Magic The Gathering cards', 5.00, 'https://upload.wikimedia.org/wikipedia/en/3/34/Boosterpacks.png', 1),
+                                                                  ('Catan', 'Classic board game.', 20.00, 'https://upload.wikimedia.org/wikipedia/en/a/a3/Catan-2015-boxart.jpg', 2),
+                                                                  ('The Witcher 3', 'Popular RPG video game.', 60.00, 'https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg', 3),
+                                                                  ('Dice', 'Pack of DND dice', 10.00, 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Dice_%28typical_role_playing_game_dice%29.jpg/200px-Dice_%28typical_role_playing_game_dice%29.jpg', 4);
 
 -- Orders
 INSERT INTO "order" (user_id, order_date, type) VALUES

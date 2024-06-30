@@ -16,7 +16,7 @@ public class UserLoggerService {
     private UserLogRepo userLogRepo;
 
     @Autowired
-    UserLoggerService(UserLogRepo userLogRepos) {
+    UserLoggerService(UserLogRepo userLogRepo) {
         this.userLogRepo = userLogRepo;
     }
 

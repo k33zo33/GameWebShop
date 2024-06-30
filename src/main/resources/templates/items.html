@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Item List</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cyborg/bootstrap.min.css" integrity="sha384-nEnU7Ae+3lD52AK+RGNzgieBWMnEfgTbRHIwEvp1XXPdqdO6uLTd/NwXbzboqjc2" crossorigin="anonymous">
     <style>
         .admin-action {
             display: none;
@@ -15,8 +15,8 @@
     </style>
 </head>
 <body>
-<!--<div th:replace="layout :: navbarFragment"></div>-->
-<h1 class="my-4 text-center">Item List</h1>
+<div th:replace="layout :: navbarFragment"></div>
+<h2 class="my-4 text-center">Games and accessories</h2>
 
 <div class="container">
     <div class="row">
@@ -44,6 +44,6 @@
     </div>
 </div>
 
-<!--<script th:replace="layout::scriptsFragment"></script>-->
+<script th:replace="layout::scriptsFragment"></script>
 </body>
 </html>

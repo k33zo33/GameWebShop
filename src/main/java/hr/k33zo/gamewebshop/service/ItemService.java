@@ -1,12 +1,14 @@
 package hr.k33zo.gamewebshop.service;
 
 import hr.k33zo.gamewebshop.model.Item;
+import hr.k33zo.gamewebshop.model.OrderItem;
 import hr.k33zo.gamewebshop.repository.ItemRepo;
 import hr.k33zo.gamewebshop.repository.OrderItemRepo;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -50,6 +52,19 @@ public class ItemService {
 
     public List<Item> getItemsByCategoryId(Long id) {
         return itemRepository.findByCategoryId(id);
+    }
+
+    @Transactional
+    public void deleteItemById(Long itemId) {
+
+        List<OrderItem> transactionItems = orderItemRepo.findByItemId(itemId);
+
+        orderItemRepo.deleteAll(transactionItems);
+
+        //List<ItemCategory> itemCategories = itemCategoryRepository.findByItemId(itemId);
+        //itemCategoryRepository.deleteAll(itemCategories);
+
+        itemRepository.deleteById(itemId);
     }
 
 

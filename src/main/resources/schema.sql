@@ -43,5 +43,5 @@ CREATE TABLE IF NOT EXISTS user_log (
                                         name VARCHAR(255) NOT NULL,
     login_date TIMESTAMP,
     ip_address VARCHAR(50),
-    event_type VARCHAR(50)
+    event VARCHAR(50)
     );
