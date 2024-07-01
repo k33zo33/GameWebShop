@@ -94,6 +94,18 @@ public class CartService {
     }
 
 
+    public void updateCartItemQuantity(int itemId, int quantity) {
+        for (CartItem ci : cart.getCart()) {
+            if (ci.getItemId() == itemId) {
+                ci.setQuantity(quantity);
+                break;
+            }
+        }
+    }
+
+
+
+
 
     public void clearCart() {
         cart.getCart().clear();

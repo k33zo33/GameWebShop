@@ -45,6 +45,13 @@ public class CartController {
         return "redirect:/cart/showCart";
     }
 
+    @PostMapping("/updateQuantity")
+    public String updateCartItemQuantity(@RequestParam("itemId") int itemId,
+                                         @RequestParam("quantity") int quantity) {
+        cartService.updateCartItemQuantity(itemId, quantity);
+        return "redirect:/cart/showCart";
+    }
+
     @PostMapping("/clear")
     public String clearCart() {
         cartService.clearCart();

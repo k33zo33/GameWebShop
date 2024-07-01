@@ -1,4 +1,4 @@
-package hr.k33zo.gamewebshop.event;
+package hr.k33zo.gamewebshop.listeners;
 
 import hr.k33zo.gamewebshop.enums.Event;
 import hr.k33zo.gamewebshop.service.UserLoggerService;

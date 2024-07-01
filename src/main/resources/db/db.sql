@@ -18,7 +18,7 @@ INSERT INTO item (name, description, price, picture, category_id) VALUES
                                                                   ('The Witcher 3', 'Popular RPG video game.', 60.00, 'https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg', 3),
                                                                   ('Dice', 'Pack of DND dice', 10.00, 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Dice_%28typical_role_playing_game_dice%29.jpg/200px-Dice_%28typical_role_playing_game_dice%29.jpg', 4),
                                                                   ('Pokemon pack', 'Pack of 15 Pokemon cards', 6.00, 'https://upload.wikimedia.org/wikipedia/en/3/3b/Pokemon_Trading_Card_Game_cardback.jpg', 1),
-                                                                  ('Fifa 22', 'Football simulation game', 30.00, 'https://upload.wikimedia.org/wikipedia/en/6/6c/FIFA_22_Cover.jpg', 1);
+                                                                  ('Fifa 22', 'Football simulation game', 30.00, 'https://upload.wikimedia.org/wikipedia/en/6/6c/FIFA_22_Cover.jpg', 3);
 
 -- Orders
 INSERT INTO "order" (user_id, order_date, type) VALUES

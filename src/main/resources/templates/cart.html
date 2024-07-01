@@ -27,7 +27,17 @@
         <tr th:each="cartItem, iterStat : ${cartItems}">
             <td th:text="${cartItem.itemId}">Item ID</td>
             <td th:text="${cartItem.name}">Item Name</td>
-            <td th:text="${cartItem.quantity}">Quantity</td>
+
+            <td>
+                <form th:action="@{/cart/updateQuantity}" method="post">
+                    <input type="hidden" name="itemId" th:value="${cartItem.itemId}" />
+                    <input type="number" name="quantity" min="1" max="999" th:value="${cartItem.quantity}" class="form-control mb-2 mr-sm-2" style="width: auto;" />
+                    <input type="hidden" name="_csrf" th:value="${_csrf.token}" />
+                    <button type="submit" class="btn btn-primary">Update Quantity</button>
+                </form>
+            </td>
+
+<!--            <td th:text="${cartItem.quantity}">Quantity</td>-->
             <td th:text="${cartItem.getPrice() * cartItem.getQuantity()}">Total Price</td>
             <td>
                 <form th:action="@{/cart/remove}" method="post">

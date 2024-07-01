@@ -47,7 +47,7 @@
             <td th:text="${order.type}"></td>
             <td>
                 <ul>
-                    <li th:each="item : ${order.items}" th:text="${item.item.name} + ' - Qty: ' + ${item.quantity}"></li>
+                    <li th:each="item : ${order.items}" th:text="${item.item.name} + ' - Quantity: ' + ${item.quantity}"></li>
                 </ul>
             </td>
         </tr>

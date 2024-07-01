@@ -17,7 +17,7 @@ public class IpCapture extends OncePerRequestFilter {
             throws ServletException, IOException {
         String ipAddress = request.getHeader("X-Forwarded-For");
         if (ipAddress == null) {
-            ipAddress = request.getRemoteAddr(); // Direct IP address
+            ipAddress = request.getRemoteAddr();
         }
 
 

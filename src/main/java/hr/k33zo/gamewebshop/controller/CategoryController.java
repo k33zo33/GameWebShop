@@ -4,6 +4,8 @@ package hr.k33zo.gamewebshop.controller;
 import hr.k33zo.gamewebshop.model.Category;
 import hr.k33zo.gamewebshop.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +25,13 @@ public class CategoryController {
     @GetMapping("/categories")
     public String getAllCategories(Model model) {
         model.addAttribute("categories", categoryService.getAllCategories());
+
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        boolean isLoggedIn = authentication != null && authentication.isAuthenticated()
+                && !(authentication.getPrincipal() instanceof String && authentication.getPrincipal().equals("anonymousUser"));
+        model.addAttribute("isLoggedIn", isLoggedIn);
+
         return "categories";
     }
 

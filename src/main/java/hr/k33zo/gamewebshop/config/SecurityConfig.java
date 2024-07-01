@@ -43,7 +43,7 @@ public class SecurityConfig {
                         .requestMatchers("/h2-console/**").permitAll()
                         .requestMatchers("/","/cart" , "cart/showCart","itemController/addItemToCart" ,
                                 "userRoleController/", "cart/add","/home", "/register", "/itemController/items",
-                                "/items", "/userRoleController/userInfo","/cart/remove").permitAll()
+                                "/items", "/userRoleController/userInfo","/cart/remove", "/categoryController/categories", "/cart/updateQuantity").permitAll()
                         .requestMatchers("/addItem", "/products", "/edituser", "/transactionLog/logs",
                                 "/itemController/delete/", "/itemController/edit/", "/categoryController/delete/",
                                 "categoryController/add", "/categoryController/edit/").hasAuthority("ADMIN")
@@ -51,7 +51,7 @@ public class SecurityConfig {
                         .anyRequest().authenticated()
                 )
                 .csrf(csrf -> csrf
-                        .ignoringRequestMatchers("/h2-console/**")
+                        .ignoringRequestMatchers("/h2-console/**", "/cart/updateQuantity")
                 )
 
                 .formLogin(login -> login.defaultSuccessUrl("/itemController/items", true))
