@@ -62,6 +62,7 @@ This application enables users to browse, add to cart, and purchase products onl
 5. **Access the Application:**
     - Open a web browser and navigate to `http://localhost:8080/`.
 
+
 ## Usage
 
 ### User (Customer)
